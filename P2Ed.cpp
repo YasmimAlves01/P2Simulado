@@ -284,8 +284,27 @@ void exibirElementosArvore(NO* no, int qtEspacos)
 void exibirMaiorMenorElemento(NO* no)
 {
 	// Aqui vai seu código 
+	if(no == NULL) {
+		cout << "A arvore esta vazia";
+		return;
+	}
 
 
+	NO* aux = no->esq;
+	NO* aux2 = no->dir;
+
+	
+
+	while (aux->esq != NULL) {
+		aux = aux->esq;
+
+	}
+	cout << aux->valor << " e o menor numero";
+
+	while (aux2->dir) {
+		aux2 = aux2->dir;
+	}
+	cout << aux2->valor << " e o maior numero";
 }
 
 void buscarElementoArvore(NO* no, int valor)
